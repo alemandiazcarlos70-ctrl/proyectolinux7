@@ -9,9 +9,9 @@ rosas.forEach(rosa => {
       petalos.forEach(p => p.style.transform = "scale(1)");
       rosa.dataset.florecida = "true";
 
-      // Crear el tallo dinámicamente
+      // Crear el tallo después de abrir pétalos
       const tallo = document.createElement("div");
-      tallo.classList.add("tallo");
+      tallo.className = "tallo";
       rosa.appendChild(tallo);
     }
 
