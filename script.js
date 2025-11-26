@@ -1,4 +1,4 @@
-const rosaFlorecida = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Rose_flower.jpg/120px-Rose_flower.jpg";
+const rosaFlorecida = "https://i.imgur.com/8QfJYwz.png";
 const rosas = document.querySelectorAll(".rosa");
 
 rosas.forEach(rosa => {
