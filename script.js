@@ -1,16 +1,10 @@
-const rosaFlorecida = "rose_flower.svg";
-const rosas = document.querySelectorAll(".rosa");
+const rosa = document.querySelector(".rosa");
+const petalos = document.querySelectorAll(".petalo");
 
-rosas.forEach(rosa => {
-  rosa.addEventListener("click", () => {
-    if (rosa.dataset.florecida === "false") {
-      rosa.src = rosaFlorecida;
-      rosa.dataset.florecida = "true";
-    }
-
-    const todasFlorecidas = Array.from(rosas).every(r => r.dataset.florecida === "true");
-    if (todasFlorecidas) {
-      document.body.style.backgroundColor = "skyblue";
-    }
-  });
+rosa.addEventListener("click", () => {
+  if (rosa.dataset.florecida === "false") {
+    petalos.forEach(p => p.style.transform = "scale(1)"); // se abren
+    rosa.dataset.florecida = "true";
+    document.body.style.backgroundColor = "skyblue"; // cambia el fondo
+  }
 });
