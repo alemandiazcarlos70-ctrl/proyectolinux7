@@ -1,15 +1,23 @@
 body {
-  background-color: black; /* Fondo negro */
+  background-color: black;
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
 }
 
-h1 {
-  color: white;
-  font-size: 28px;
-  text-align: center;
+.florero {
+  display: flex;
+  gap: 20px;
+}
+
+.rosa {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.rosa:hover {
+  transform: scale(1.1);
 }
