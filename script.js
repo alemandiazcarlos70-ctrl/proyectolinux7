@@ -12,8 +12,8 @@ rosas.forEach(rosa => {
 
     const todasFlorecidas = Array.from(rosas).every(r => r.dataset.florecida === "true");
     if (todasFlorecidas) {
-      document.body.style.backgroundColor = "skyblue";
-      sol.style.bottom = "0"; // el sol aparece arriba
+      document.body.style.backgroundColor = "skyblue"; // aparece el día
+      sol.style.opacity = "1"; // aparece el sol
     }
   });
 });
