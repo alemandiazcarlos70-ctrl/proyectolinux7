@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Florerito en GitHub Pages</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .florero {
+      display: flex;
+      gap: 20px;
+    }
+    .rosa {
+      width: 120px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .rosa:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="florero">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rose_bud.jpg/120px-Rose_bud.jpg" 
+         class="rosa" data-florecida="false">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rose_bud.jpg/120px-Rose_bud.jpg" 
+         class="rosa" data-florecida="false">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rose_bud.jpg/120px-Rose_bud.jpg" 
+         class="rosa" data-florecida="false">
+  </div>
+
+  <script>
+    const rosaFlorecida = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Rose_flower.jpg/120px-Rose_flower.jpg";
+    const rosas = document.querySelectorAll(".rosa");
+
+    rosas.forEach(rosa => {
+      rosa.addEventListener("click", () => {
+        if (rosa.dataset.florecida === "false") {
+          rosa.src = rosaFlorecida;
+          rosa.dataset.florecida = "true";
+        }
+        const todasFlorecidas = Array.from(rosas).every(r => r.dataset.florecida === "true");
+        if (todasFlorecidas) {
+          document.body.style.backgroundColor = "skyblue";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
