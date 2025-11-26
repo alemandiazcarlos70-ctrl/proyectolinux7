@@ -1,1 +1,0 @@
-# proyectolinux7
