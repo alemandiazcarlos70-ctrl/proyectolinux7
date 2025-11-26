@@ -8,7 +8,6 @@ body {
   align-items: center;
 }
 
-/* Sol oculto al inicio */
 #sol {
   position: absolute;
   top: 30px;
@@ -19,7 +18,7 @@ body {
   background: yellow;
   border-radius: 50%;
   box-shadow: 0 0 50px gold;
-  opacity: 0; /* invisible al inicio */
+  opacity: 0;
   transition: opacity 2s ease;
 }
 
@@ -42,8 +41,9 @@ body {
   height: 60px;
   background: pink;
   border-radius: 50%;
-  transform: scale(0.2); /* cerrada */
+  transform: scale(0.2);
   transition: transform 2s ease;
+  z-index: 2; /* encima del tallo */
 }
 
 .petalo:nth-child(1) { top: 0; left: 30px; }
@@ -59,17 +59,18 @@ body {
   height: 40px;
   background: red;
   border-radius: 50%;
+  z-index: 3;
 }
 
-/* Tallo oculto al inicio */
 .tallo {
   position: absolute;
   top: 100px;
   left: 55px;
   width: 10px;
   height: 100px;
-  background: green;   /* verde sólido */
+  background: green;
   border-radius: 5px;
-  opacity: 0;          /* invisible al inicio */
+  opacity: 0;
   transition: opacity 2s ease;
+  z-index: 1; /* detrás de los pétalos */
 }
