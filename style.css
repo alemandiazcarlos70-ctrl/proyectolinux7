@@ -3,15 +3,15 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
   flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
 }
 
 .florero {
   display: flex;
   gap: 40px;
-  margin-bottom: 50px;
+  margin-top: 200px; /* empuja las rosas hacia el centro */
 }
 
 .rosa {
