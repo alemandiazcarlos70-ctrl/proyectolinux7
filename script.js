@@ -1,4 +1,4 @@
-const rosaFlorecida = "rose_flower.jpg";
+const rosaFlorecida = "rose_flower.svg";
 const rosas = document.querySelectorAll(".rosa");
 
 rosas.forEach(rosa => {
