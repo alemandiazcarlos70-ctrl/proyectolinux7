@@ -1,0 +1,15 @@
+body {
+  background-color: black; /* Fondo negro */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+}
