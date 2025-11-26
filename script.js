@@ -1,10 +1,19 @@
-const rosa = document.querySelector(".rosa");
-const petalos = document.querySelectorAll(".petalo");
+const rosas = document.querySelectorAll(".rosa");
+const sol = document.getElementById("sol");
 
-rosa.addEventListener("click", () => {
-  if (rosa.dataset.florecida === "false") {
-    petalos.forEach(p => p.style.transform = "scale(1)"); // se abren
-    rosa.dataset.florecida = "true";
-    document.body.style.backgroundColor = "skyblue"; // cambia el fondo
-  }
+rosas.forEach(rosa => {
+  const petalos = rosa.querySelectorAll(".petalo");
+
+  rosa.addEventListener("click", () => {
+    if (rosa.dataset.florecida === "false") {
+      petalos.forEach(p => p.style.transform = "scale(1)");
+      rosa.dataset.florecida = "true";
+    }
+
+    const todasFlorecidas = Array.from(rosas).every(r => r.dataset.florecida === "true");
+    if (todasFlorecidas) {
+      document.body.style.backgroundColor = "skyblue";
+      sol.style.bottom = "50px"; // el sol sube
+    }
+  });
 });
