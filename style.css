@@ -1,13 +1,7 @@
-.tallo {
-  position: absolute;
-  top: 120px;         /* más abajo que los pétalos */
-  left: 58px;         /* centrado debajo del centro */
-  width: 4px;
-  height: 80px;
-  background-color: green;
-  z-index: 0;         /* detrás de todo */
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  animation: crecer 0.6s ease-out forwards;
+.rosa {
+  position: relative;
+  width: 120px;
+  height: 200px;
+  cursor: pointer;
+  overflow: hidden; /* evita que el tallo sobresalga */
 }
