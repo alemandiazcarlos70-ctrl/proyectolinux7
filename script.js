@@ -9,16 +9,25 @@ rosas.forEach(rosa => {
       petalos.forEach(p => p.style.transform = "scale(1)");
       rosa.dataset.florecida = "true";
 
-      // Crear el tallo dinámicamente
+      // Crear tallo
       const tallo = document.createElement("div");
       tallo.className = "tallo";
       rosa.appendChild(tallo);
+
+      // Crear hojas
+      const hojaIzq = document.createElement("div");
+      hojaIzq.className = "hoja izquierda";
+      rosa.appendChild(hojaIzq);
+
+      const hojaDer = document.createElement("div");
+      hojaDer.className = "hoja derecha";
+      rosa.appendChild(hojaDer);
     }
 
     const todasFlorecidas = Array.from(rosas).every(r => r.dataset.florecida === "true");
     if (todasFlorecidas) {
       document.body.style.backgroundColor = "skyblue";
-      sol.style.opacity = "1";
+      sol.style.bottom = "30px"; // el sol sube suavemente
     }
   });
 });
