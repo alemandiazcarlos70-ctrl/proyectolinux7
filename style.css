@@ -4,20 +4,35 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra verticalmente */
-  align-items: center;     /* centra horizontalmente */
+  justify-content: flex-start; /* sol arriba */
+  align-items: center;
 }
 
+/* Sol arriba */
+#sol {
+  position: relative;
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 50px gold;
+  bottom: -200px; /* empieza oculto */
+  transition: bottom 3s ease;
+}
+
+/* Flores centradas */
 .florero {
   display: flex;
   gap: 40px;
-  margin-top: 200px; /* empuja las rosas hacia el centro */
+  margin-top: auto; /* empuja hacia abajo */
+  margin-bottom: 50px;
 }
 
 .rosa {
   position: relative;
   width: 120px;
-  height: 120px;
+  height: 200px; /* espacio para tallo */
   cursor: pointer;
 }
 
@@ -46,16 +61,13 @@ body {
   border-radius: 50%;
 }
 
-/* Sol oculto al inicio */
-#sol {
+/* Tallo */
+.tallo {
   position: absolute;
-  bottom: -200px; /* empieza fuera de la pantalla */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
-  background: yellow;
-  border-radius: 50%;
-  box-shadow: 0 0 50px gold;
-  transition: bottom 3s ease;
+  top: 100px;
+  left: 55px;
+  width: 10px;
+  height: 100px;
+  background: green;
+  border-radius: 5px;
 }
