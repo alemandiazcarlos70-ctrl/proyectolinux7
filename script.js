@@ -27,7 +27,7 @@ rosas.forEach(rosa => {
     const todasFlorecidas = Array.from(rosas).every(r => r.dataset.florecida === "true");
     if (todasFlorecidas) {
       document.body.style.backgroundColor = "skyblue";
-      sol.style.bottom = "30px"; // el sol sube suavemente
+      sol.style.bottom = "400px"; // el sol sube más arriba
     }
   });
 });
